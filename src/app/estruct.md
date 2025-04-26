@@ -261,8 +261,3 @@ Entender essa estrutura é essencial para criar aplicações **robustas**, **mod
 > **Dica:** Pratique criando pequenos projetos, como um sistema de tarefas ou um gerenciador de contatos, para fixar melhor a estrutura!
 
 ---
-
----
-
-Se quiser, posso também criar um modelo prático de projeto exemplo para você!  
-Quer que eu já monte? 🎯✨

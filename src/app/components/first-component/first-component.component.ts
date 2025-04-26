@@ -5,7 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './first-component.component.html',
   styleUrls: ['./first-component.component.css']
 })
-export class FirstComponentComponent {
+export class FirstComponentComponent implements OnInit {
+
+  name: string = 'Mateus';
+  age: number = 20;
+  job = 'Progamming';
+  hobbies = ['Correr', 'Jogar', 'Estudar'];
+
+  //objeto em javasript
+  car = {
+    name: "Polo",
+    year: 2019,
+  }
+
   constructor(){
 
   }
