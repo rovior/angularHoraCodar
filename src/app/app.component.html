@@ -1,1 +1,29 @@
+
+
+<!-- Esse componente é o componente pai de todos -->
 <h1>Hello World Angular!</h1>
+<p> Alguma coisa </p>
+
+<div>
+  <a href="#">Clique Aqui</a>
+</div>
+
+<!--Importando o compoente first-compoente que ja foi importando em app.modules.ts
+    esse nome <app-first-componet> é declarado em first-component.component.ts em selector-->
+<app-first-component></app-first-component>
+
+<!--Importando componente parent-data ao qual ja foi chamado em app.modules.ts
+    <app-parent-data> nome declarado em selector no parent-data-component.ts 
+    
+    e aqui por fim exibir os valores das variavis que por utimo foram atibuidos valores em app.component.ts
+
+    aqui por fim chamando o objeto 
+
+    daqui vamos para parent-data.component.html
+    declarar as informações por interpolação
+    
+    -->
+<app-parent-data 
+  [name]="userName"
+  [userData]="userData"
+></app-parent-data>

@@ -1,0 +1,15 @@
+<div class="class">
+
+  <!--isso *ngIf permite mostrar essa meensagem isso graças ao true em if-render.component.ts  se o valor for false então isso aqui ia ser ocutado " -->
+  <div *ngIf="canShow"> Estamos mostrando isso porque foi permitido </div>
+
+  <!--nesse caso temos que o nome so vai aparecer se for iqual a sentença que declaramos nesse caso como nossa variavel é name=marcos então não vai aparecer funciona como um **if and else** e caso 
+a sentença não for satisfeita então ele reage com nameNotFund mas para isso funcionar é preciso 
+criar algo como um try catch  por isso colocamos a tag <ng-template #nameNotFound>  -->
+  <div *ngIf="name === 'Marcos'; else nameNotFound ">O nome aparece</div>
+  <ng-template #nameNotFound>
+    <div>
+      <h2>O nome não foi encontrado!</h2>
+    </div>
+  </ng-template>
+</div>
