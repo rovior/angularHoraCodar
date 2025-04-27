@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-eventos',
-  imports: [],
   templateUrl: './eventos.component.html',
-  styleUrl: './eventos.component.css'
+  styleUrls: ['./eventos.component.css']
 })
 export class EventosComponent {
   show: boolean = false;
@@ -14,6 +13,6 @@ export class EventosComponent {
 
   showMessage(): void{
     this.show = true;
-  }
+  } 
 
 }

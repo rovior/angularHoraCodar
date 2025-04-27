@@ -1,0 +1,18 @@
+<!-- 
+Este botão está no arquivo change-number.component.html.
+Quando clicamos nele, chamamos a função handleClick() que está criada em change-number.component.ts.
+-->
+<button (click)="handleClick()">Alterar o número!</button>
+
+<!-- 
+Lembrando: esse botão está dentro do componente ChangeNumberComponent,
+e a função handleClick() também está definida lá, no change-number.component.ts.
+-->
+
+<!-- 
+Mas como vamos fazer para avisar outro componente (por exemplo, um componente pai) que o número mudou,
+se o botão e a função estão em componentes separados?
+
+A resposta é: usamos o @Output() e o EventEmitter dentro do change-number.component.ts para disparar um evento.
+Assim, o componente pai pode "escutar" o evento e fazer alguma ação (como mudar o número).
+-->

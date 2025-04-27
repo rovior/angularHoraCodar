@@ -1,0 +1,78 @@
+<div class="class">
+  <h1>O número é: {{ myNumber }}</h1>
+  <!--perceba aqui que o change-number esta sendo chamado no emitter-->
+  <app-change-number (changeNumber)="onChangeNumber()"></app-change-number>
+</div>
+
+<!-- aqui é criado a interface do componente e vai ser declarado na classe pai app.component.html
+ Vamos analisar o HTML do `EmitterComponent` em detalhes para entender o que está acontecendo na interface do usuário e como ele interage com os componentes. Aqui está o código que você enviou:
+
+### **Código: `emitter.component.html`**
+
+```html
+<div class="class">
+  <h1>O número é: {{ myNumber }}</h1>
+  perceba aqui que o change-number está sendo chamado no emitter 
+  <app-change-number (changeNumber)="onChangeNumber()"></app-change-number>
+</div>
+```
+
+---
+
+### **Explicação detalhada de cada parte**:
+
+#### 1. **`<div class="class">`**
+```html
+<div class="class">
+```
+- Um elemento `div` com a classe `class`. 
+- Este `div` serve como **contêiner** para todo o conteúdo da interface do `EmitterComponent`.
+- A classe `class` pode ser usada para adicionar estilos no arquivo CSS (se necessário) ou aplicar algumas regras de layout.
+
+#### 2. **`<h1>O número é: {{ myNumber }}</h1>`**
+```html
+<h1>O número é: {{ myNumber }}</h1>
+```
+- **Interpolação (`{{ myNumber }}`)**: 
+  - O **Angular data binding** está sendo usado aqui com **interpolação** (as chaves duplas `{{ }}`).
+  - O valor da variável `myNumber` que está no **componente TypeScript** será exibido diretamente na interface do usuário.
+  - Sempre que o valor de `myNumber` mudar (como após o evento disparado pelo filho), a tela será **atualizada automaticamente**.
+  
+  **Resumo**: Esta linha exibe o número que foi alterado dentro do componente quando o evento é disparado pelo filho.
+
+#### 3. **`<app-change-number (changeNumber)="onChangeNumber()"></app-change-number>`**
+```html
+<app-change-number (changeNumber)="onChangeNumber()"></app-change-number>
+```
+- **`<app-change-number>`**: Aqui está o **componente filho** `ChangeNumberComponent`, que é inserido dentro do `EmitterComponent`.
+  
+  - **`(changeNumber)="onChangeNumber()"`**: Este é um **evento de escuta**:
+    - `changeNumber` é o nome do evento que será **emitido** pelo `ChangeNumberComponent` (definido no `@Output()`).
+    - Quando o evento `changeNumber` é disparado pelo **filho** (quando o usuário clica no botão dentro do `ChangeNumberComponent`), o **pai** (no caso, o `EmitterComponent`) executa a função `onChangeNumber()`.
+    
+  **Resumo**: Esse trecho configura a **interação entre o componente pai e o filho**. Quando o filho emite o evento `changeNumber`, a função `onChangeNumber()` do pai é executada, o que faz o número mudar.
+
+---
+
+### Fluxo geral no HTML do `EmitterComponent`
+
+1. O valor de `myNumber` é exibido dentro da tag `<h1>`.
+2. O `ChangeNumberComponent` é **incorporado** dentro do `EmitterComponent` e é **responsável por emitir o evento**.
+3. Quando o **evento `changeNumber` é emitido** pelo `ChangeNumberComponent` (o botão é clicado), o `EmitterComponent` executa a função `onChangeNumber()`.
+4. A função `onChangeNumber()` gera um número aleatório e o valor de `myNumber` é **atualizado**.
+5. A tela exibe automaticamente o novo valor de `myNumber`.
+
+---
+
+### **Recapitulando o fluxo de interação entre os componentes**:
+1. O `EmitterComponent` contém um título que mostra o número atual (`myNumber`).
+2. O `ChangeNumberComponent` está incorporado dentro do `EmitterComponent` e contém um botão.
+3. Quando o botão do `ChangeNumberComponent` é clicado, ele emite o evento `changeNumber`.
+4. O `EmitterComponent` **ouve** esse evento e executa a função `onChangeNumber()`, alterando o número.
+5. O número é **atualizado automaticamente** na interface, exibindo o novo valor de `myNumber`.
+
+---
+
+Agora que você entendeu o HTML e como ele interage com os componentes, quer passar para algum outro arquivo ou parte do código? Ou prefere que eu explique mais algum detalhe específico?
+
+-->

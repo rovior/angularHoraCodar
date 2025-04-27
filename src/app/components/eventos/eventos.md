@@ -1,7 +1,3 @@
-Perfeito!  
-Aqui está um documento `.md` sobre **Eventos em Angular**, feito no mesmo estilo que o anterior — organizado, fácil de entender e com exemplos:
-
----
 
 # Eventos no Angular
 
@@ -175,6 +171,3 @@ receberMensagem(mensagem: string) {
 > Não desista — você está evoluindo a cada novo conceito! 🚀
 
 ---
-
-Se quiser, posso também criar exemplos mais avançados depois (como usar eventos de mouse, drag and drop, ou eventos de formulários complexos).  
-Quer que eu monte mais exemplos? 🎯👨‍💻✨
