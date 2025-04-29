@@ -16,8 +16,8 @@ export class ListService {
     
   }
 
-  remove(animals: Animal[], animal: Animal){
-    return animals.filter((a) => animal.name !== a.name);
+  remove(id: number){
+    return this.http.delete<Animal>(`${this.apiUrl}/${id}`);
   }
 
   //pegando os dados da api

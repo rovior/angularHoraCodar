@@ -14,10 +14,11 @@ export class ItemDetailComponent implements OnInit {
   animal?: Animal;
 
   constructor(private listService: ListService, private route: ActivatedRoute) {
-    this.getAnimal()
+    
    }
 
   ngOnInit(): void {
+    this.getAnimal()
   }
 
   getAnimal(){
