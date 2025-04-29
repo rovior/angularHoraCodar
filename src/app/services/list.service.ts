@@ -23,5 +23,5 @@ export class ListService {
   //pegando os dados da api
   getAll(): Observable<Animal[]> { 
     return this.http.get<Animal[]>(this.apiUrl)
-  }
+  } 
 }

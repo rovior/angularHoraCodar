@@ -20,23 +20,23 @@ export class ListRenderComponent implements OnInit {
 
   animalDetails = '';
 
-  constructor(private listService: ListService) { 
+  constructor(private listService: ListService) { }
+
+  ngOnInit(): void {
     this.getAnimals();
   }
 
-  ngOnInit(): void {
-  }
 
-  showAge(animal: Animal){
+  showAge(animal: Animal) {
     this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`;
   }
 
-  removeAnimal(animal: Animal){
+  removeAnimal(animal: Animal) {
     console.log('Removendo animal...');
     this.animals = this.listService.remove(this.animals, animal);
   }
 
-  getAnimals(): void{
+  getAnimals(): void {
     this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
-}
+} 

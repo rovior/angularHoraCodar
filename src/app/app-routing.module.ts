@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //importando os dois compoenentes que vamos usar 
+/*
+agora trabalhando com requisições vamos ter que baixar dois pacotes: HttpClient e HttpHeadersab
+baixamos então esses pacotes com: npm i json-server
+Neste exemplo utilizamos uma API local para simular as request, com json-serve
+Por último, é necesário inicializar o módulo HttpClientModule em app.module.ts;
+*/
 import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 const routes: Routes = [
   { path: '', component: FirstComponentComponent },
   { path: 'list', component: ListRenderComponent},
+  { path: 'list/:id', component: ItemDetailComponent }
 ];
 
 @NgModule({
