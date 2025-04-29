@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
-
 import { ListService } from 'src/app/services/list.service';
 
 @Component({
@@ -11,12 +10,6 @@ import { ListService } from 'src/app/services/list.service';
 export class ListRenderComponent implements OnInit {
   /* populando o objeto animal */
   animals: Animal[] = [];
-
-  animal: Animal = {
-    name: 'Teste',
-    type: 'Alguma coisa',
-    age: 10,
-  };
 
   animalDetails = '';
 

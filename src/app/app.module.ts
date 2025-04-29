@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -34,7 +36,14 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     ItemDetailComponent //declranado compoenente para que seja reconhecido 
 
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule, 
+    HttpClientModule,
+    RouterModule,
+    CommonModule],
+    
   providers: [],
   bootstrap: [AppComponent],
 })
