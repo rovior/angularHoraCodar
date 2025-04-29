@@ -1,0 +1,10 @@
+{
+  "animals":[
+    {"id": 1, "name": "Turca", "type": "Dog", "age": 8},
+    {"id": 2, "name": "prikito", "type": "papagaio", "age": 7},
+    {"id": 3, "name": "jujuba", "type": "House", "age": 2},
+    {"id": 4, "name": "pipoca", "type": "Cat", "age": 3},
+    {"id": 5, "name": "ravena", "type": "Bird", "age": 1},
+    {"id": 6, "name": "cleitin", "type": "Dog", "age": 5}
+  ]
+}
