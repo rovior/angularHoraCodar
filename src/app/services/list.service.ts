@@ -28,5 +28,13 @@ export class ListService {
   getItem(id: number): Observable<Animal> {
     return this.http.get<Animal>(`${this.apiUrl}/${id}`);
   }
+  create(animal: Animal): Observable<Animal> {
+    return this.http.post<Animal>(this.apiUrl, animal);
+  }
+  
+  addAnimal(animal: Animal): Observable<Animal> {
+    return this.http.post<Animal>(this.apiUrl, animal);
+  }
+  
   
 }

@@ -1,5 +1,27 @@
-<div *ngIf="animal" class="class">
+<div *ngIf="animal; else createForm" class="class">
   <p>ID: {{animal.id}}</p>
   <h1>{{animal.name}}</h1>
   <p>Tipo: {{animal.type}}</p>
 </div>
+
+<ng-template #createForm>
+  <h2>Cadastrar Novo Animal</h2>
+<form (ngSubmit)="createAnimal()" #animalForm="ngForm">
+  <label>Nome:
+    <input type="text" [(ngModel)]="newAnimal.name" name="name" required>
+  </label>
+  <br>
+
+  <label>Tipo:
+    <input type="text" [(ngModel)]="newAnimal.type" name="type" required>
+  </label>
+  <br>
+
+  <label>Idade:
+    <input type="number" [(ngModel)]="newAnimal.age" name="age" required>
+  </label>
+  <br>
+
+  <button type="submit" [disabled]="animalForm.invalid">Cadastrar</button>
+</form>
+</ng-template>

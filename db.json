@@ -1,12 +1,6 @@
 {
   "animals": [
     {
-      "id": "3",
-      "name": "jujuba",
-      "type": "House",
-      "age": 2
-    },
-    {
       "id": "4",
       "name": "pipoca",
       "type": "Cat",
